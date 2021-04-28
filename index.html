@@ -19,6 +19,8 @@
    <link rel="stylesheet" href="css/styleBorder.css">
    <!-- bootstrap css -->
    <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
 
@@ -45,6 +47,7 @@
       width: 200%;
       height: 320px;
    }
+
    .imgHabilidades {
       max-width: 65px;
    }
@@ -111,7 +114,7 @@
             <div class="col-md-5">
                <div class="text-bg">
                   <h1>Geovanni<br>Ramirez</h1>
-                  <span>Desarrollador Js.</span>
+                  <span>Desarrollador Jr.</span>
                   <p>
                      Si lo puedes imaginar lo puedes programar.
                      <br>
@@ -148,35 +151,45 @@
 
 
    <!-- end banner -->
-   <!-- Hosting -->
-   <div id="" class="hosting">
+   <!-- EStudios -->
+   <div class="hosting">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2>What’s New In Web Hosting</h2>
+                  <h2>Estudios</h2>
                </div>
             </div>
          </div>
          <div class="row">
             <div class="col-md-12">
-               <div class="web_hosting">
-                  <figure><img src="images/web.jpg" alt="#" /></figure>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+               <div class="d-sm-block d-none ">
+                  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <img class="d-block w-100" src="images/slide-1.png" alt="Primer Estudio">
+                        </div>
+                        <div class="carousel-item">
+                           <img class="d-block w-100" src="images/slide-2.png" alt="Segundo Estudio">
+                        </div>
+                        <div class="carousel-item">
+                           <img class="d-block w-100" src="images/slide-3.png" alt="Otro Estudio">
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+               <div class=" d-sm-none d-block">
                   <br>
                   <br>
+                  <div class="skill-set-boundary">
+                     <span class="borders top-border"></span>
+                     <span class="borders right-border"></span>
+                     <span class="borders bottom-border"></span>
+                     <span class="borders left-border"></span>
+                     <div class="entry">HTML</div>
+                  </div>
                </div>
-
-               <div class="skill-set-boundary">
-                  <span class="borders top-border"></span>
-                  <span class="borders right-border"></span>
-                  <span class="borders bottom-border"></span>
-                  <span class="borders left-border"></span>
-                  <div class="entry">HTML</div>
-               </div>
-
             </div>
          </div>
       </div>
@@ -198,10 +211,26 @@
             </div>
          </div>
          <div class="row">
+            <!-- HTML -->
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+               <div class="Services-box">
+                  <i><img src="images/html.png" alt="HTML" class="imgHabilidades" /></i>
+                  <h3>HTML</h3>
+                  <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
+               </div>
+            </div>
+            <!-- JAVA -->
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+               <div class="Services-box">
+                  <i><img src="images/java.png" alt="JAVA" class="imgHabilidades" /></i>
+                  <h3>JAVA</h3>
+                  <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
+               </div>
+            </div>
             <!-- PHP -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/codigo-php.png" alt="PHP" class="imgHabilidades"/></i>
+                  <i><img src="images/codigo-php.png" alt="PHP" class="imgHabilidades" /></i>
                   <h3>PHP</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
@@ -209,15 +238,15 @@
             <!-- LARAVEL -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/laravel.png" alt="LARAVEL" class="imgHabilidades"/></i>
-                  <h3>LARAVEL</h3> 
+                  <i><img src="images/laravel.png" alt="LARAVEL" class="imgHabilidades" /></i>
+                  <h3>LARAVEL</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
             </div>
             <!-- DOCKER -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/docker.png" alt="DOCKER" class="imgHabilidades"/></i>
+                  <i><img src="images/docker.png" alt="DOCKER" class="imgHabilidades" /></i>
                   <h3>DOCKER</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
@@ -225,8 +254,16 @@
             <!-- GITHUB -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/github.png" alt="GITHUB" class="imgHabilidades"/></i>
+                  <i><img src="images/github.png" alt="GITHUB" class="imgHabilidades" /></i>
                   <h3>GITHUB</h3>
+                  <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
+               </div>
+            </div>
+            <!-- GIT -->
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+               <div class="Services-box">
+                  <i><img src="images/git.png" alt="GIT" class="imgHabilidades" /></i>
+                  <h3>GIT</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
             </div>
@@ -241,7 +278,7 @@
             <!-- SQL -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/sql.png" alt="SQL" class="imgHabilidades"/></i>
+                  <i><img src="images/sql.png" alt="SQL" class="imgHabilidades" /></i>
                   <h3>SQL</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
@@ -249,35 +286,21 @@
             <!-- MYSQL -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/mysqL.png" alt="MYSQL" class="imgHabilidades"/></i>
+                  <i><img src="images/mysqL.png" alt="MYSQL" class="imgHabilidades" /></i>
                   <h3>MY SQL</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
             </div>
-            <!-- HTML -->
+
+            <!-- PHOTOSHOP -->
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                <div class="Services-box">
-                  <i><img src="images/html-5.png" alt="HTML" class="imgHabilidades"/></i>
-                  <h3>HTML</h3>
+                  <i><img src="images/photoshop.png" alt="PHOTOSHOP" class="imgHabilidades" /></i>
+                  <h3>PHOTOSHOP</h3>
                   <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
                </div>
             </div>
-            <!-- HTML -->
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-               <div class="Services-box">
-                  <i><img src="images/html-5.png" alt="HTML" class="imgHabilidades"/></i>
-                  <h3>HTML</h3>
-                  <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
-               </div>
-            </div>
-            <!-- HTML -->
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-               <div class="Services-box">
-                  <i><img src="images/html-5.png" alt="HTML" class="imgHabilidades"/></i>
-                  <h3>HTML</h3>
-                  <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p>
-               </div>
-            </div>
+            
 
          </div>
       </div>
@@ -289,10 +312,11 @@
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
-                  <h2>Why you should choose </h2>
-                  <p>making it look like readable English. Many desktop publishing packages and web page editors now use
-                     Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
-                     still </p>
+                  <h2>Experiencia Laboral </h2>
+                  <p>
+                     Actualmente me especializo en el área de programación e informatica, desenvolviendome de la mejor
+                     manera.
+                  </p>
                </div>
             </div>
          </div>

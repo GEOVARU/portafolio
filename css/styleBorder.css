@@ -1,0 +1,46 @@
+
+  .skill-set-boundary {
+    font-family: 'Lato', sans-serif;
+    width: 300px;
+    height: 150px;
+    
+    
+    transform:translateY(-50%);
+    
+    margin: 0 auto;
+  }
+  .borders {
+    display: block;
+    position: absolute;
+  }
+  .top-border, .right-border {
+    top: 0;
+  }
+  .right-border {
+    right: 0;
+  }
+  .bottom-border {
+    right: 0;
+    bottom: 0;
+  }
+  .left-border {
+    left: 0;
+    bottom: 0;
+  }
+
+  
+  .top-border, .bottom-border  {
+    /*width: 300px;*/
+    height: 4px;
+  }
+  .right-border, .left-border {
+    width: 4px;
+    /*height: 150px;*/
+  }
+  
+  .entry {
+    color: #E34C26;
+    font-size: 3em;
+    text-align: center;
+    line-height: 150px;
+  }

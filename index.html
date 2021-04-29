@@ -23,7 +23,7 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <!-- style css -->
    <link rel="stylesheet" href="css/style.css">
-
+   <link rel="stylesheet" href="css/textAnimate.css">
    <!-- Responsive-->
    <link rel="stylesheet" href="css/responsive.css">
    <!-- fevicon -->
@@ -36,7 +36,8 @@
       media="screen">
    <!-- iconos de font awasome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
+   <!-- Animacion de texto -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 <!-- body -->
 <style>
@@ -68,9 +69,6 @@
    }
 
    .texto-Moviendose {
-      animation-duration: 3s;
-      animation-name: slidein;
-      animation-iteration-count: infinite;
       color: white;
    }
 </style>
@@ -443,7 +441,7 @@
          <div class="container">
             <div class="row">
                <div class="col-md-11 offset-md-1 justify-content-center">
-                  <div >
+                  <div>
                      <h3 style="color: white;">¿Quien soy?</h3>
                      <span>Te dare una breve descripcion sobre mi</span>
                      <p>Joven emprendedor, con conocimientos en el área de informatica y programcion, soy una persona
@@ -456,24 +454,24 @@
                </div>
             </div>
             <hr style=" background: white;">
-            <div class="row">
-               <div class="col-12 col-lg-8 col-md-8 col-sm-8">
-                  <h5 class="texto-Moviendose">
-                     Geovanni Ramirez |
-                     Redes sociales: @geovaru |
-                     Correo personal: <a style=" color: white;"
-                        href="mailto:alfredogeovanni.ramireztzunun@gmail.com">Click aqui</a> |
 
-                     Pais: Guatemala
-                  </h5>
-               </div>
-            </div>
          </div>
 
          <div class="copyright">
+
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
+                     <div id="text-animate">
+
+                        Geovanni Ramirez |
+                        Redes sociales: @geovaru |
+                        Correo personal: <a 
+                           href="mailto:alfredogeovanni.ramireztzunun@gmail.com">Click aqui</a> |
+                        Pais: Guatemala
+
+                     </div>
+                     <br>
                      <p>© 2021 Derechos reservados. |<a href="mailto:alfredogeovanni.ramireztzunun@gmail.com">Enviame un
                            Correo</a></p>
                   </div>
@@ -486,6 +484,7 @@
    <!-- ajax -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <!-- Javascript files-->
+   <script src="js/animateText.js"></script>
    <script src="js/borderAnimate.js"></script>
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>

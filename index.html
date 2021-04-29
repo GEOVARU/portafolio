@@ -66,6 +66,13 @@
       color: white;
       background: none;
    }
+
+   .texto-Moviendose {
+      animation-duration: 3s;
+      animation-name: slidein;
+      animation-iteration-count: infinite;
+      color: white;
+   }
 </style>
 
 <body class="main-layout">
@@ -388,8 +395,9 @@
                </div>
             </div>
          </div>
-         <div class="d-none">
-            <div class="row">
+
+         <div class="row justify-content-center">
+            <div class="d-none">
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div id="box_ho" class="why-box">
                      <i><img src="images/why1.png" alt="#" /></i>
@@ -402,75 +410,41 @@
                   </div>
                   <a class="read_more bg" href="#">Read More</a>
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="why-box">
-                     <i><img src="images/why2.png" alt="#" /></i>
-                     <h3>Totaly Optimised</h3>
-                     <p>making it look like readable English. Many desktop publishing packages and web page editors now
-                        use
-                        Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                        sites
-                        still </p>
-                  </div>
-                  <a class="read_more bg" href="#">Read More</a>
+            </div>
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+               <div class="why-box">
+                  <i><img src="images/why2.png" /></i>
+                  <h3>Desarrollador Jr.</h3>
+                  <p>Actualmente laboro como desarrollador de aplicaciones web utilizando como entorno de trabajo
+                     larabel, es muy util y seguro. Trabajo con los lenguajes de programacion Html, php, javaScript
+                     entre otros.
+                     <br>
+                     Utlizo la metodologia de trabajo MVC (Modelo, Vista, Controlador), debido a que es mas ordenada la
+                     forma de trabajar y mas fácil de entender el codigo ejecutado. Estudio la Universidad los dias
+                     sabados en la carrera de Ing. en Sistemas de Informacion y Ciencias de la Computación, de esta
+                     manera poder crecer mas en mis conocimientos conjuto con lo adquirido en el área laboral.
+                  </p>
+                  <a class="read_more bg" href="www.linkedin.com/in/geovanni-ramirez-154277209">Perfil Linkedin</a>
+
                </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="why-box">
-                     <i><img src="images/why3.png" alt="#" /></i>
-                     <h3>Worldwide Support</h3>
-                     <p>making it look like readable English. Many desktop publishing packages and web page editors now
-                        use
-                        Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web
-                        sites
-                        still </p>
-                  </div>
-                  <a class="read_more bg" href="#">Read More</a>
-               </div>
+               <br>
             </div>
          </div>
+
 
       </div>
    </div>
    <!-- end Experiencia -->
-   <!-- contact -->
-   <div class="contact">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-6 offset-md-3 ">
-               <!-- espacio en blanco -->
-               <!-- <form class="main_form">
-                     <div class="row">
-                        <div class="col-sm-12">
-                           <input class="contactus" placeholder="Name" type="text" name="Name">
-                        </div>
-                        <div class="col-sm-12">
-                           <input class="contactus" placeholder="Email" type="text" name=" Email">
-                        </div>
-                        <div class="col-sm-12">
-                           <input class="contactus" placeholder="Phone" type="text" name="Phone">
-                        </div>
-                        <div class="col-sm-12">
-                           <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
-                        </div>
-                        <div class="col-sm-12">
-                           <button class="send">Send</button>
-                        </div>
-                     </div>
-                  </form> -->
-            </div>
-         </div>
-      </div>
-   </div>
 
-   <!-- end contact -->
+
    <!--  footer -->
    <footer id="contact">
       <div class="footer">
          <div class="container">
             <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <div class="cont">
-                     <h3>¿Quien soy?</h3>
+               <div class="col-md-11 offset-md-1 justify-content-center">
+                  <div >
+                     <h3 style="color: white;">¿Quien soy?</h3>
                      <span>Te dare una breve descripcion sobre mi</span>
                      <p>Joven emprendedor, con conocimientos en el área de informatica y programcion, soy una persona
                         creativa.
@@ -483,12 +457,15 @@
             </div>
             <hr style=" background: white;">
             <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <div class="cont">
-                     <div class="col-12 col-lg-4 col-md-4 col-sm-4"></div>
-                     <div class="col-12 col-lg-8 col-md-8 col-sm-8"></div>
+               <div class="col-12 col-lg-8 col-md-8 col-sm-8">
+                  <h5 class="texto-Moviendose">
+                     Geovanni Ramirez |
+                     Redes sociales: @geovaru |
+                     Correo personal: <a style=" color: white;"
+                        href="mailto:alfredogeovanni.ramireztzunun@gmail.com">Click aqui</a> |
 
-                  </div>
+                     Pais: Guatemala
+                  </h5>
                </div>
             </div>
          </div>
@@ -504,7 +481,6 @@
             </div>
          </div>
       </div>
-
    </footer>
    <!-- end footer -->
    <!-- ajax -->

@@ -73,7 +73,6 @@
                                         <a class="nav-link scroll link" href="#portfolio-sec">SOBRE MI</a>
                                         <a class="nav-link scroll link" href="#estudiosAcademicos">CURSOS
                                             UNIVERSITARIOS</a>
-                                        <a class="nav-link scroll link d-none" href="#pricing-sec">PRICING</a>
                                         <a class="nav-link scroll link" href="#contact-sec">CONTACTO</a>
                                         <span class="menu-line"><i class="fa fa-angle-down"></i>
                                         </span>
@@ -867,371 +866,906 @@
     <section class="portfolio-sec padding-top padding-bottom" id="estudiosAcademicos">
         <div class="container">
             <div class="row portfolio-heading-area text-center text-lg-left">
+
+                <style>
+                    /* -------------------------------- 
+
+                    Primary style
+
+                    -------------------------------- */
+                    *,
+                    *:after,
+                    *:before {
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        box-sizing: border-box;
+                    }
+
+
+
+                    img {
+                        max-width: 100%;
+                    }
+
+                    h1,
+                    h2 {
+                        font-family: "Open Sans", sans-serif;
+                        font-weight: bold;
+                    }
+
+                    /* -------------------------------- 
+
+                        Modules - reusable parts of our design
+
+                        -------------------------------- */
+                    .cd-container {
+                        /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+                        width: 90%;
+                        max-width: 1170px;
+                        margin: 0 auto;
+                    }
+
+                    .cd-container::after {
+                        /* clearfix */
+                        content: "";
+                        display: table;
+                        clear: both;
+                    }
+
+                    /* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+                    #cd-timeline {
+                        position: relative;
+                        padding: 2em 0;
+                        margin-top: 2em;
+                        margin-bottom: 2em;
+                    }
+
+                    #cd-timeline::before {
+                        /* this is the vertical line */
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 18px;
+                        height: 100%;
+                        width: 4px;
+                        background: #d7e4ed;
+                    }
+
+                    @media only screen and (min-width: 1170px) {
+                        #cd-timeline {
+                            margin-top: 3em;
+                            margin-bottom: 3em;
+                        }
+
+                        #cd-timeline::before {
+                            left: 50%;
+                            margin-left: -2px;
+                        }
+                    }
+
+                    .cd-timeline-block {
+                        position: relative;
+                        margin: 2em 0;
+                    }
+
+                    .cd-timeline-block::after {
+                        clear: both;
+                        content: "";
+                        display: table;
+                    }
+
+                    .cd-timeline-block:first-child {
+                        margin-top: 0;
+                    }
+
+                    .cd-timeline-block:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    @media only screen and (min-width: 1170px) {
+                        .cd-timeline-block {
+                            margin: 4em 0;
+                        }
+
+                        .cd-timeline-block:first-child {
+                            margin-top: 0;
+                        }
+
+                        .cd-timeline-block:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    .cd-timeline-img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        box-shadow: 0 0 0 4px #ffffff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+                    }
+
+                    .cd-timeline-img img {
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        position: relative;
+                        left: 50%;
+                        top: 50%;
+                        margin-left: -12px;
+                        margin-top: -12px;
+                    }
+
+                    .cd-timeline-img.cd-picture {
+                        background: #75ce66;
+                    }
+
+                    .cd-timeline-img.cd-movie {
+                        background: #c03b44;
+                    }
+
+                    .cd-timeline-img.cd-location {
+                        background: #f0ca45;
+                    }
+
+                    @media only screen and (min-width: 1170px) {
+                        .cd-timeline-img {
+                            width: 60px;
+                            height: 60px;
+                            left: 50%;
+                            margin-left: -30px;
+                            /* Force Hardware Acceleration in WebKit */
+                            -webkit-transform: translateZ(0);
+                            -webkit-backface-visibility: hidden;
+                        }
+
+                        .cssanimations .cd-timeline-img.is-hidden {
+                            visibility: hidden;
+                        }
+
+                        .cssanimations .cd-timeline-img.bounce-in {
+                            visibility: visible;
+                            -webkit-animation: cd-bounce-1 0.6s;
+                            -moz-animation: cd-bounce-1 0.6s;
+                            animation: cd-bounce-1 0.6s;
+                        }
+                    }
+
+                    @-webkit-keyframes cd-bounce-1 {
+                        0% {
+                            opacity: 0;
+                            -webkit-transform: scale(0.5);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: scale(1.2);
+                        }
+
+                        100% {
+                            -webkit-transform: scale(1);
+                        }
+                    }
+
+                    @-moz-keyframes cd-bounce-1 {
+                        0% {
+                            opacity: 0;
+                            -moz-transform: scale(0.5);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -moz-transform: scale(1.2);
+                        }
+
+                        100% {
+                            -moz-transform: scale(1);
+                        }
+                    }
+
+                    @keyframes cd-bounce-1 {
+                        0% {
+                            opacity: 0;
+                            -webkit-transform: scale(0.5);
+                            -moz-transform: scale(0.5);
+                            -ms-transform: scale(0.5);
+                            -o-transform: scale(0.5);
+                            transform: scale(0.5);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: scale(1.2);
+                            -moz-transform: scale(1.2);
+                            -ms-transform: scale(1.2);
+                            -o-transform: scale(1.2);
+                            transform: scale(1.2);
+                        }
+
+                        100% {
+                            -webkit-transform: scale(1);
+                            -moz-transform: scale(1);
+                            -ms-transform: scale(1);
+                            -o-transform: scale(1);
+                            transform: scale(1);
+                        }
+                    }
+
+                    .cd-timeline-content {
+                        background: gray;
+                        position: relative;
+                        margin-left: 60px;
+                        background: #ffffff;
+                        border-radius: 0.25em;
+                        padding: 1em;
+                        box-shadow: 0 3px 0 #d7e4ed;
+                    }
+
+                    .cd-timeline-content::after {
+                        clear: both;
+                        content: "";
+                        display: table;
+                    }
+
+                    .cd-timeline-content h2 {
+                        color: #303e49;
+                    }
+
+                    .cd-timeline-content p,
+                    .cd-timeline-content .cd-read-more,
+                    .cd-timeline-content .cd-date {
+                        font-size: 13px;
+                        font-size: 0.8125rem;
+                    }
+
+                    .cd-timeline-content .cd-read-more,
+                    .cd-timeline-content .cd-date {
+                        display: inline-block;
+                    }
+
+                    .cd-timeline-content p {
+                        margin: 1em 0;
+                        line-height: 1.6;
+                    }
+
+                    .cd-timeline-content .cd-read-more {
+                        float: right;
+                        padding: 0.8em 1em;
+                        background: #acb7c0;
+                        color: #ffffff;
+                        border-radius: 0.25em;
+                    }
+
+                    .no-touch .cd-timeline-content .cd-read-more:hover {
+                        background-color: #bac4cb;
+                    }
+
+                    .cd-timeline-content .cd-date {
+                        float: left;
+                        padding: 0.8em 0;
+                        opacity: 0.7;
+                    }
+
+                    .cd-timeline-content::before {
+                        content: "";
+                        position: absolute;
+                        top: 16px;
+                        right: 100%;
+                        height: 0;
+                        width: 0;
+                        border: 7px solid transparent;
+                        border-right: 7px solid #ffffff;
+                    }
+
+                    @media only screen and (min-width: 768px) {
+                        .cd-timeline-content h2 {
+                            font-size: 20px;
+                            font-size: 1.25rem;
+                        }
+
+                        .cd-timeline-content p {
+                            font-size: 16px;
+                            font-size: 1rem;
+                        }
+
+                        .cd-timeline-content .cd-read-more,
+                        .cd-timeline-content .cd-date {
+                            font-size: 14px;
+                            font-size: 0.875rem;
+                        }
+                    }
+
+                    @media only screen and (min-width: 1170px) {
+                        .cd-timeline-content {
+                            margin-left: 0;
+                            padding: 1.6em;
+                            width: 45%;
+                        }
+
+                        .cd-timeline-content::before {
+                            top: 24px;
+                            left: 100%;
+                            border-color: transparent;
+                            border-left-color: #ffffff;
+                        }
+
+                        .cd-timeline-content .cd-read-more {
+                            float: left;
+                        }
+
+                        .cd-timeline-content .cd-date {
+                            position: absolute;
+                            width: 100%;
+                            left: 122%;
+                            top: 6px;
+                            font-size: 16px;
+                            font-size: 1rem;
+                        }
+
+                        .cd-timeline-block:nth-child(even) .cd-timeline-content {
+                            float: right;
+                        }
+
+                        .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+                            top: 24px;
+                            left: auto;
+                            right: 100%;
+                            border-color: transparent;
+                            border-right-color: #ffffff;
+                        }
+
+                        .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+                            float: right;
+                        }
+
+                        .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+                            left: auto;
+                            right: 122%;
+                            text-align: right;
+                        }
+
+                        .cssanimations .cd-timeline-content.is-hidden {
+                            visibility: hidden;
+                        }
+
+                        .cssanimations .cd-timeline-content.bounce-in {
+                            visibility: visible;
+                            -webkit-animation: cd-bounce-2 0.6s;
+                            -moz-animation: cd-bounce-2 0.6s;
+                            animation: cd-bounce-2 0.6s;
+                        }
+                    }
+
+                    @media only screen and (min-width: 1170px) {
+
+                        /* inverse bounce effect on even content blocks */
+                        .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+                            -webkit-animation: cd-bounce-2-inverse 0.6s;
+                            -moz-animation: cd-bounce-2-inverse 0.6s;
+                            animation: cd-bounce-2-inverse 0.6s;
+                        }
+                    }
+
+                    @-webkit-keyframes cd-bounce-2 {
+                        0% {
+                            opacity: 0;
+                            -webkit-transform: translateX(-100px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: translateX(20px);
+                        }
+
+                        100% {
+                            -webkit-transform: translateX(0);
+                        }
+                    }
+
+                    @-moz-keyframes cd-bounce-2 {
+                        0% {
+                            opacity: 0;
+                            -moz-transform: translateX(-100px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -moz-transform: translateX(20px);
+                        }
+
+                        100% {
+                            -moz-transform: translateX(0);
+                        }
+                    }
+
+                    @keyframes cd-bounce-2 {
+                        0% {
+                            opacity: 0;
+                            -webkit-transform: translateX(-100px);
+                            -moz-transform: translateX(-100px);
+                            -ms-transform: translateX(-100px);
+                            -o-transform: translateX(-100px);
+                            transform: translateX(-100px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: translateX(20px);
+                            -moz-transform: translateX(20px);
+                            -ms-transform: translateX(20px);
+                            -o-transform: translateX(20px);
+                            transform: translateX(20px);
+                        }
+
+                        100% {
+                            -webkit-transform: translateX(0);
+                            -moz-transform: translateX(0);
+                            -ms-transform: translateX(0);
+                            -o-transform: translateX(0);
+                            transform: translateX(0);
+                        }
+                    }
+
+                    @-webkit-keyframes cd-bounce-2-inverse {
+                        0% {
+                            opacity: 0;
+                            -webkit-transform: translateX(100px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: translateX(-20px);
+                        }
+
+                        100% {
+                            -webkit-transform: translateX(0);
+                        }
+                    }
+
+                    @-moz-keyframes cd-bounce-2-inverse {
+                        0% {
+                            opacity: 0;
+                            -moz-transform: translateX(100px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -moz-transform: translateX(-20px);
+                        }
+
+                        100% {
+                            -moz-transform: translateX(0);
+                        }
+                    }
+
+                    @keyframes cd-bounce-2-inverse {
+                        0% {
+                            opacity: 0;
+                            -webkit-transform: translateX(100px);
+                            -moz-transform: translateX(100px);
+                            -ms-transform: translateX(100px);
+                            -o-transform: translateX(100px);
+                            transform: translateX(100px);
+                        }
+
+                        60% {
+                            opacity: 1;
+                            -webkit-transform: translateX(-20px);
+                            -moz-transform: translateX(-20px);
+                            -ms-transform: translateX(-20px);
+                            -o-transform: translateX(-20px);
+                            transform: translateX(-20px);
+                        }
+
+                        100% {
+                            -webkit-transform: translateX(0);
+                            -moz-transform: translateX(0);
+                            -ms-transform: translateX(0);
+                            -o-transform: translateX(0);
+                            transform: translateX(0);
+                        }
+                    }
+                </style>
                 <div class="col-12 col-lg-11">
+                    <section id="cd-timeline" class="cd-container">
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-picture">
+                                <img src="vendor/img/universidad.png" alt="Picture">
+                            </div>
+                            <style>
+                                /* Estilos para el contenido del dropdown */
+                                .dropdown-content {
+                                    display: none;
+                                    background-color: #f9f9f9;
+                                    position: absolute;
+                                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                    padding: 12px;
+                                    list-style-type: none;
+                                }
 
-                    <table border="2">
-                        <tr>
-                            <th>Nombre del Curso</th>
-                            <th>Año</th>
-                            <th>Semestre</th>
-                            <th>Estado</th>
-                        </tr>
-                        <tr>
-                            <td>DESARROLLO HUMANO Y PROFESIONAL</td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>METODOLOGIA DE LA INVESTIGACIÓN</td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>CONTABILIDAD 1</td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>INTRODUCCION A LOS SISTEMAS</td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>LOGICA DE SISTEMAS</td>
-                            <td>2020</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>PRECALCULO</td>
-                            <td>2020</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ALGEBRA LINEAL</td>
-                            <td>2020</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ALGORITMOS</td>
-                            <td>2020</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>CONTABILIDAD 2</td>
-                            <td>2020</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>MATEMATICA DISCRETA</td>
-                            <td>2020</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>FISICA 1</td>
-                            <td>2021</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>PROGRAMACION 1</td>
-                            <td>2021</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>CALCULO 1</td>
-                            <td>2021</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>PROCESO ADMINISTRATIVO</td>
-                            <td>2021</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>DERECHO INFORMATICO</td>
-                            <td>2021</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>MICROECONOMIA</td>
-                            <td>2021</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>PROGRAMACION 2</td>
-                            <td>2021</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>CALCULO 2</td>
-                            <td>2021</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ESTADISTICA 1</td>
-                            <td>2021</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>FISICA 2</td>
-                            <td>2022</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>METODOS NUMERICOS</td>
-                            <td>2022</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>PROGRAMACION 3</td>
-                            <td>2022</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>EMPRENDEDORES DE NEGOCIOS</td>
-                            <td>2022</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ELECTRONICA ANALOGICA</td>
-                            <td>2022</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ESTADISTICA 2</td>
-                            <td>2022</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>INVESTIGACIÓN DE OPERACIONES</td>
-                            <td>2022</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>BASES DE DATOS 1</td>
-                            <td>2022</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>AUTOMATAS Y LENGUJES FORMALES</td>
-                            <td>2022</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>SISTEMAS OPERATIVOS 1</td>
-                            <td>2023</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ELECTRONICA DIGITAL</td>
-                            <td>2023</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>BASES DE DATOS 2</td>
-                            <td>2023</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ANALISIS DE SISTEMAS 1</td>
-                            <td>2023</td>
-                            <td>1</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>SISTEMAS OPERATIVOS 2</td>
-                            <td>2023</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>ARQUITECTURA DE COMPUTADORAS 1</td>
-                            <td>2023</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                        <tr>
-                            <td>COMPILADORES</td>
-                            <td>2023</td>
-                            <td>2</td>
-                            <td><img src="vendor/img/verified.png" width="40px" alt="Curso Aprobado"
-                                    title="Curso Aprobado"></td>
-                        </tr>
-                    </table>
+                                /* Estilo para los elementos de la lista dentro del dropdown */
+                                .dropdown-content li {
+                                    margin: 6px 0;
+                                }
+
+                                /* Cambiar el estilo del botón cuando se despliega el dropdown */
+                                .dropdown-content.active {
+                                    display: block;
+                                    z-index: 1000;
+                                }
+
+                                /* Establecer el tamaño del contenedor */
+                                .table-container {
+                                    width: 500px;
+                                    height: 500px;
+                                    overflow: auto;
+                                }
+                            </style>
+
+                            <div class="cd-timeline-content">
+                                <h2>Ingeniería en Sistemas de Información</h2>
+                                <p>
+                                    Universidad Mariano Gálvez de Guatemala.
+                                    <br>
+                                    8vo Semestre.
+
+                                </p>
+                                <a href="#0" class="cd-read-more" onclick="toggleDropdown()">
+                                    Desplegar Cursos aprobados
+                                </a>
+                                <ul class="dropdown-content" id="dropdownContent">
+                                    <li>
+                                        <div class="col-12 col-lg-11 table-container">
+
+                                            <table border="2">
+                                                <tr>
+                                                    <th>Nombre del Curso</th>
+                                                    <th>Año</th>
+                                                    <th>Semestre</th>
+                                                    <th>Estado</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>DESARROLLO HUMANO Y PROFESIONAL</td>
+                                                    <td>2020</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>METODOLOGIA DE LA INVESTIGACIÓN</td>
+                                                    <td>2020</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CONTABILIDAD 1</td>
+                                                    <td>2020</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>INTRODUCCION A LOS SISTEMAS</td>
+                                                    <td>2020</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>LOGICA DE SISTEMAS</td>
+                                                    <td>2020</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PRECALCULO</td>
+                                                    <td>2020</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ALGEBRA LINEAL</td>
+                                                    <td>2020</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ALGORITMOS</td>
+                                                    <td>2020</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CONTABILIDAD 2</td>
+                                                    <td>2020</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MATEMATICA DISCRETA</td>
+                                                    <td>2020</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FISICA 1</td>
+                                                    <td>2021</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PROGRAMACION 1</td>
+                                                    <td>2021</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CALCULO 1</td>
+                                                    <td>2021</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PROCESO ADMINISTRATIVO</td>
+                                                    <td>2021</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>DERECHO INFORMATICO</td>
+                                                    <td>2021</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>MICROECONOMIA</td>
+                                                    <td>2021</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PROGRAMACION 2</td>
+                                                    <td>2021</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CALCULO 2</td>
+                                                    <td>2021</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ESTADISTICA 1</td>
+                                                    <td>2021</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>FISICA 2</td>
+                                                    <td>2022</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>METODOS NUMERICOS</td>
+                                                    <td>2022</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PROGRAMACION 3</td>
+                                                    <td>2022</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>EMPRENDEDORES DE NEGOCIOS</td>
+                                                    <td>2022</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ELECTRONICA ANALOGICA</td>
+                                                    <td>2022</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ESTADISTICA 2</td>
+                                                    <td>2022</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>INVESTIGACIÓN DE OPERACIONES</td>
+                                                    <td>2022</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BASES DE DATOS 1</td>
+                                                    <td>2022</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AUTOMATAS Y LENGUJES FORMALES</td>
+                                                    <td>2022</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SISTEMAS OPERATIVOS 1</td>
+                                                    <td>2023</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ELECTRONICA DIGITAL</td>
+                                                    <td>2023</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BASES DE DATOS 2</td>
+                                                    <td>2023</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ANALISIS DE SISTEMAS 1</td>
+                                                    <td>2023</td>
+                                                    <td>1</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>SISTEMAS OPERATIVOS 2</td>
+                                                    <td>2023</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ARQUITECTURA DE COMPUTADORAS 1</td>
+                                                    <td>2023</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>COMPILADORES</td>
+                                                    <td>2023</td>
+                                                    <td>2</td>
+                                                    <td><img src="vendor/img/verified.png" width="40px"
+                                                            alt="Curso Aprobado" title="Curso Aprobado"></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <span class="cd-date">2020 - 2023</span>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-movie">
+                                <img src="vendor/img/graduado.png" alt="Movie">
+                            </div>
+
+                            <div class="cd-timeline-content">
+                                <h2>Cursos y certificacion</h2>
+                                <p>
+                                    El instituto Educativo Asistencial Emiliani y Hogar de Huérfanos Santa Teresa
+                                    <br>
+                                    Curso de electronica digital
+
+                                </p>
+                                <!-- <a href="#0" class="cd-read-more">Read more</a> -->
+                                <span class="cd-date">2019</span>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-picture">
+                                <img src="vendor/img/educacionMedia.png" alt="Picture">
+                            </div>
+
+                            <div class="cd-timeline-content">
+                                <h2>Carrera de nivel media</h2>
+                                <p>
+                                    El instituto Educativo Asistencial Emiliani y Hogar de Huérfanos Santa Teresa.
+                                    <br>
+                                    Bachiller Insdustrial y Perito con especialidad en computacion.
+                                </p>
+                                <!-- <a href="#0" class="cd-read-more">Read more</a> -->
+                                <span class="cd-date">2017 - 2019</span>
+                            </div> <!-- cd-timeline-content -->
+                        </div> <!-- cd-timeline-block -->
+
+                        <!--
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-location">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg"
+                                    alt="Location">
+                            </div>
+
+                            <div class="cd-timeline-content">
+                                <h2>Title of section 4</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum
+                                    provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?
+                                    Iste voluptatibus minus veritatis qui ut.</p>
+                                <a href="#0" class="cd-read-more">Read more</a>
+                                <span class="cd-date">Feb 14</span>
+                            </div>
+                        </div>
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-location">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg"
+                                    alt="Location">
+                            </div>
+
+                            <div class="cd-timeline-content">
+                                <h2>Title of section 5</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum
+                                    provident rerum.</p>
+                                <a href="#0" class="cd-read-more">Read more</a>
+                                <span class="cd-date">Feb 18</span>
+                            </div>
+                        </div>
+                        <div class="cd-timeline-block">
+                            <div class="cd-timeline-img cd-movie">
+                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg"
+                                    alt="Movie">
+                            </div>
+
+                            <div class="cd-timeline-content">
+                                <h2>Final Section</h2>
+                                <p>This is the content of the last section</p>
+                                <span class="cd-date">Feb 26</span>
+                            </div>
+                        </div> -->
+                    </section> <!-- cd-timeline -->
+
                 </div>
+
             </div>
         </div>
     </section>
-    <!--Pricing section start-->
-    <section class="d-none pricing-sec padding-top padding-bottom" id="pricing-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 pricing-heading-area text-center">
-                    <span class="sub-heading">Lorem ipsum is simply dummy text
-
-                    </span>
-                    <h4 class="heading">CHOOSE YOUR <span class="color">PLAN
-
-                        </span></h4>
-                    <p class="text">
-                        Lorem ipsum is simply dummy text of the printing and typesetting. Lorem Ipsum has been the
-                        industry’s standard dummy. Lorem Ipsum has been the industry’s standard dummy.
-                    </p>
-                </div>
-            </div>
-            <div class="row pricing-cards">
-                <div class="col-12 col-md-6 col-lg-3 pricing-card">
-                    <div class="pricing-box wow fadeInUp">
-                        <div class="pricing-box-header position-relative">
-                            <div class="pricing-header-overlay"></div>
-                            <div class="header-content">
-                                <h4 class="pricing-price">4.99</h4>
-                                <i class="lni lni-dollar dollar"></i>
-                                <p class="sub-text">Monthly Billing</p>
-                            </div>
-                        </div>
-                        <div class="pricing-box-detail position-relative">
-                            <div class="pricing-detail-overlay"></div>
-                            <ul>
-                                <li>Full access</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Email Accounts</li>
-                                <li>4 Free Forks Every Months</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 pricing-card active">
-                    <div class="pricing-box wow fadeInUp" data-wow-delay=".3s">
-                        <div class="pricing-box-header position-relative">
-                            <div class="pricing-header-overlay"></div>
-                            <div class="header-content">
-                                <h4 class="pricing-price">11.95</h4>
-                                <i class="lni lni-dollar dollar"></i>
-                                <p class="sub-text">Quarterly Billing</p>
-                            </div>
-                        </div>
-                        <div class="pricing-box-detail position-relative">
-                            <div class="pricing-detail-overlay"></div>
-                            <ul>
-                                <li>Full access</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Email Accounts</li>
-                                <li>4 Free Forks Every Months</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 pricing-card">
-                    <div class="pricing-box wow fadeInUp" data-wow-delay=".5s">
-                        <div class="pricing-box-header position-relative">
-                            <div class="pricing-header-overlay"></div>
-                            <div class="header-content">
-                                <h4 class="pricing-price">25.99</h4>
-                                <i class="lni lni-dollar dollar"></i>
-                                <p class="sub-text">Biannual Billing</p>
-                            </div>
-                        </div>
-                        <div class="pricing-box-detail position-relative">
-                            <div class="pricing-detail-overlay"></div>
-                            <ul>
-                                <li>Full access</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Email Accounts</li>
-                                <li>4 Free Forks Every Months</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3 pricing-card">
-                    <div class="pricing-box wow fadeInUp" data-wow-delay=".7s">
-                        <div class="pricing-box-header position-relative">
-                            <div class="pricing-header-overlay"></div>
-                            <div class="header-content">
-                                <h4 class="pricing-price">45.95</h4>
-                                <i class="lni lni-dollar dollar"></i>
-                                <p class="sub-text">Yearly Billing</p>
-                            </div>
-                        </div>
-                        <div class="pricing-box-detail position-relative">
-                            <div class="pricing-detail-overlay"></div>
-                            <ul>
-                                <li>Full access</li>
-                                <li>Unlimited Bandwidth</li>
-                                <li>Email Accounts</li>
-                                <li>4 Free Forks Every Months</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--Pricing section end-->
 
     <!--testimonial section start-->
     <div class="d-none testimonial-sec padding-top position-relative" id="testimonial-sec">
@@ -1442,7 +1976,7 @@
                 </div>
                 <!--Text-->
                 <div class="col-lg-6 text-center text-lg-right">
-                    <p class="company-about fadeIn">© 2021  - 2023 Geovanni Ramirez. Portafolio <a
+                    <p class="company-about fadeIn">© 2021 - 2023 Geovanni Ramirez. Portafolio <a
                             href="javascript:void(0);">Analista programador - Desarrollador</a>
                     </p>
                 </div>
@@ -1492,6 +2026,44 @@
 
     <!-- custom script -->
     <script src="personal-profile/js/script.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            var $timeline_block = $('.cd-timeline-block');
+
+            //hide timeline blocks which are outside the viewport
+            $timeline_block.each(function () {
+                if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.75) {
+                    $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+                }
+            });
+
+            //on scolling, show/animate timeline blocks when enter the viewport
+            $(window).on('scroll', function () {
+                $timeline_block.each(function () {
+                    if ($(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden')) {
+                        $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+                    }
+                });
+            });
+        });
+
+
+
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById("dropdownContent");
+
+            // Verificar si el dropdown está abierto o cerrado
+            if (dropdownContent.classList.contains("active")) {
+                // Si está abierto, cerrarlo
+                dropdownContent.classList.remove("active");
+            } else {
+                // Si está cerrado, abrirlo
+                dropdownContent.classList.add("active");
+            }
+        }
+
+    </script>
 </body>
 
 </html>

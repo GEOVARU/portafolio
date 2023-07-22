@@ -447,7 +447,7 @@ ul {
 .heading {
   color: #202020;
   font-family: Oswald, sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 50px;
 }
@@ -741,6 +741,7 @@ header .main-navigation nav .navbar-nav .nav-link.active {
 }
 .header-appear .navbar-brand .logo-fixed {
   display: block;
+  border-radius: 50%;
 }
 .header-appear .main-navigation {
   padding-top: 15px;
@@ -2474,7 +2475,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#110028",endCo
   }
   /*team sec*/
   .team-sec .team-detail {
-    margin-bottom: 80px;
+    margin-bottom: 70px;
   }
   .team-sec .inner-team-sec .team-area {
     width: 70%;
